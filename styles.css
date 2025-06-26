@@ -1,8 +1,12 @@
 :root {
-  --primary-color: #2b4c7e;
-  --error-color: #ff0000;
-  --border-color: #e5e7eb;
-  --focus-color: #2563eb;
+  --primary-color: #4a8bdf; /* Brighter blue for dark mode */
+  --error-color: #ff6b6b; /* Softer red for dark mode */
+  --border-color: #4a5568; /* Darker border for dark mode */
+  --focus-color: #60a5fa; /* Brighter blue for focus */
+  --bg-dark: #1a1a1a; /* Main dark background */
+  --bg-darker: #111111; /* Darker sections */
+  --text-primary: #e2e8f0; /* Main text color */
+  --text-secondary: #a0aec0; /* Secondary text color */
 }
 
 * {
@@ -15,6 +19,8 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif;
   min-height: 100vh;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
 }
 
 .container {
@@ -32,7 +38,7 @@ body {
 }
 
 .logo-banner {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
   position: absolute;
   top: 20vh;
   width: 100%;
@@ -41,6 +47,7 @@ body {
   justify-content: center;
   align-items: center;
   gap: 1.5rem;
+  backdrop-filter: blur(4px);
 }
 
 .adventure-logo {
@@ -62,22 +69,23 @@ body {
   bottom: 1rem;
   width: 100%;
   text-align: center;
-  color: white;
+  color: var(--text-primary);
   font-size: 0.8rem;
 }
 
 .photo-credit a {
-  color: white;
+  color: var(--text-primary);
   text-decoration: none;
 }
 
 .photo-credit a:hover {
   text-decoration: underline;
+  color: white;
 }
 
 .form-section {
   flex: 1.5;
-  background-color: #f9fafb;
+  background-color: var(--bg-dark);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -100,16 +108,18 @@ body {
 .form-header p {
   font-size: 1.1rem;
   line-height: 1.5;
-  color: #4b5563;
+  color: var(--text-secondary);
   max-width: 600px;
   margin-bottom: 0.5rem;
 }
 
 .form-content {
-  background-color: white;
+  background-color: var(--bg-darker);
   padding: 2rem;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
   margin-bottom: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
 }
 
 .form-row {
@@ -128,21 +138,25 @@ label {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin-bottom: 0.5rem;
-  color: #374151;
+  color: var(--text-secondary);
 }
 
 input {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.75rem;
   border: 1px solid var(--border-color);
   border-radius: 4px;
   font-size: 1rem;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  transition: all 0.3s ease;
 }
 
 input:focus {
   outline: none;
   border-color: var(--focus-color);
-  box-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 0 5px rgba(96, 165, 250, 0.3);
+  background-color: rgba(74, 139, 223, 0.1);
 }
 
 input:invalid {
@@ -151,16 +165,11 @@ input:invalid {
 
 input:invalid:focus {
   border-color: var(--error-color);
-  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.3);
 }
 
 input:valid {
   border-color: var(--border-color);
-}
-
-input:valid:focus {
-  border-color: var(--focus-color);
-  box-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
 }
 
 /* Show validation state only after user interaction */
@@ -170,7 +179,15 @@ input:placeholder-shown {
 
 input:placeholder-shown:focus {
   border-color: var(--focus-color);
-  box-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
+  box-shadow: 0 0 5px rgba(96, 165, 250, 0.3);
+}
+
+.requirements {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+  font-style: italic;
 }
 
 .create-account {
@@ -182,15 +199,22 @@ input:placeholder-shown:focus {
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: all 0.3s ease;
 }
 
 .create-account:hover {
-  background-color: #1a365d;
+  background-color: #2563eb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+}
+
+.create-account:active {
+  transform: translateY(0);
 }
 
 .form-footer p {
   margin-top: 2rem;
+  color: var(--text-secondary);
 }
 
 .form-footer a {
@@ -201,12 +225,5 @@ input:placeholder-shown:focus {
 
 .form-footer a:hover {
   text-decoration: underline;
-}
-
-.requirements {
-  display: block;
-  font-size: 0.7rem;
-  color: #666;
-  margin-top: 0.25rem;
-  font-style: italic;
+  color: var(--focus-color);
 }
