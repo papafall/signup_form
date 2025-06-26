@@ -1,70 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-up Form</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      @font-face {
+        font-family: "Norse Bold";
+        src: url("assets/Norse-Bold.otf") format("opentype");
+      }
+    </style>
     <!-- We'll add the specific font link later -->
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="image-sidebar">
-            <div class="logo-banner">
-                <img src="assets/odin-logo.png" alt="Odin Logo" class="odin-logo">
-                <h1 class="logo-text">ODIN</h1>
-            </div>
-            <div class="photo-credit">
-                <!-- We'll add photo credit here -->
-            </div>
+      <div class="image-sidebar">
+        <div class="logo-banner">
+          <img src="assets/odin-logo.png" alt="Odin Logo" class="odin-logo" />
+          <h1 class="logo-text">ODIN</h1>
         </div>
-        <div class="form-section">
-            <div class="form-header">
-                <h2>This is not a real online service! Sign up now to get started.</h2>
-                <p>You know you want to.</p>
-            </div>
-            <form class="signup-form">
-                <div class="form-content">
-                    <h3>Let's do this!</h3>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="first-name">First Name</label>
-                            <input type="text" id="first-name" name="first-name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="last-name">Last Name</label>
-                            <input type="text" id="last-name" name="last-name" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" id="password" name="password" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="confirm-password">Confirm Password</label>
-                            <input type="password" id="confirm-password" name="confirm-password" required>
-                        </div>
-                    </div>
-                </div>
-                <div class="form-footer">
-                    <button type="submit" class="create-account">Create Account</button>
-                    <p>Already have an account? <a href="#">Log in</a></p>
-                </div>
-            </form>
+        <div class="photo-credit">
+          Photo by
+          <a
+            href="https://unsplash.com/@haliewestphoto"
+            target="_blank"
+            rel="noopener"
+            >Halie West</a
+          >
+          on
+          <a
+            href="https://unsplash.com/photos/green-trees-25xggax4bSA"
+            target="_blank"
+            rel="noopener"
+            >Unsplash</a
+          >
         </div>
+      </div>
+      <div class="form-section">
+        <div class="form-header">
+          <h2>
+            This is not a real online service! Sign up now to get started.
+          </h2>
+          <p>You know you want to.</p>
+        </div>
+        <form class="signup-form">
+          <div class="form-content">
+            <h3>Let's do this!</h3>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" required />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" required />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required />
+              </div>
+              <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input
+                  type="password"
+                  id="confirm-password"
+                  name="confirm-password"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="form-footer">
+            <button type="submit" class="create-account">Create Account</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
+          </div>
+        </form>
+      </div>
     </div>
-</body>
-</html> 
+  </body>
+</html>

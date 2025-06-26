@@ -22,8 +22,8 @@ A sign-up form project created as part of The Odin Project curriculum. This proj
 ## Credits
 
 - Odin Logo: [The Odin Project](https://www.theodinproject.com/)
-- Background Image: [To be added]
-- Font: Norse Bold (or alternative to be selected)
+- Background Image: Photo by [Halie West](https://unsplash.com/@haliewestphoto) on [Unsplash](https://unsplash.com/photos/green-trees-25xggax4bSA)
+- Font: Norse Bold from The Odin Project
 
 ## Setup
 
