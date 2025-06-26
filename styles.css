@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #596d48;
+  --primary-color: #2b4c7e;
   --error-color: #ff0000;
   --border-color: #e5e7eb;
   --focus-color: #2563eb;
@@ -32,25 +32,29 @@ body {
 }
 
 .logo-banner {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.7);
   position: absolute;
   top: 20vh;
   width: 100%;
-  padding: 1rem 0;
+  padding: 2rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
-.odin-logo {
-  height: 100px;
+.adventure-logo {
+  height: 120px;
+  width: 120px;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
 }
 
 .logo-text {
   color: white;
-  font-size: 5rem;
-  font-family: "Norse Bold", sans-serif;
+  font-size: 4.5rem;
+  font-family: "Norse Bold", Arial, sans-serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 0.1em;
 }
 
 .photo-credit {
@@ -172,7 +176,7 @@ input:placeholder-shown:focus {
 }
 
 .create-account:hover {
-  background-color: #4c5e3f;
+  background-color: #1a365d;
 }
 
 .form-footer p {
