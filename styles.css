@@ -135,6 +135,30 @@ input:invalid {
   border-color: var(--error-color);
 }
 
+input:invalid:focus {
+  border-color: var(--error-color);
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+}
+
+input:valid {
+  border-color: var(--border-color);
+}
+
+input:valid:focus {
+  border-color: var(--focus-color);
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
+}
+
+/* Show validation state only after user interaction */
+input:placeholder-shown {
+  border-color: var(--border-color);
+}
+
+input:placeholder-shown:focus {
+  border-color: var(--focus-color);
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.2);
+}
+
 .create-account {
   background-color: var(--primary-color);
   color: white;
@@ -163,4 +187,12 @@ input:invalid {
 
 .form-footer a:hover {
   text-decoration: underline;
+}
+
+.requirements {
+  display: block;
+  font-size: 0.7rem;
+  color: #666;
+  margin-top: 0.25rem;
+  font-style: italic;
 }
